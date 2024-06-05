@@ -14,6 +14,7 @@ main{
     justify-content: center;
     align-items: center;
     position:relative;
+    
 }
  main::before{
     content:"";
@@ -35,3 +36,72 @@ main{
     transform:translate(200px,150px)
     
  }
+
+ section{
+    height: 300PX;
+    width: 500PX;
+    background-color: rgba(210, 205, 205, 0.6);
+  backdrop-filter: blur(10px);
+  z-index: 1;
+    border-radius: 30px;
+    padding:30px;
+    
+ }
+ 
+ 
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-title{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size:15px;
+}
+
+.logo-title h2{
+    font-weight: 300;
+    font-size:20px;
+    
+}
+.logo-title .logo{
+    width:50px;
+    margin-right: 15px;
+
+}
+
+.chip-img{
+    width:70px;
+}
+.card-no{
+    margin-top: 45px;
+    margin-bottom:25px;
+    width:100%;
+    height:50px;
+
+}
+
+.card-no p,h2{
+ margin:0;
+
+}
+.card-no h2{
+    font-weight: 300;
+    font-size:20px;
+}
+.card-no p{
+    margin-bottom:12px;
+
+}
+.name-validity{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.validity{
+    font-weight: 300;
+}
