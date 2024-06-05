@@ -16,6 +16,7 @@ main{
     align-items: center;
     position:relative;
     perspective: 1000px;
+   
 }
 .container{
     position:relative;
@@ -24,7 +25,7 @@ main{
     z-index:100;
     transition:0.6s;
     transform-style:preserve-3d;
-}
+    }
 
 .container:hover{
     transform:rotateY(180deg);
