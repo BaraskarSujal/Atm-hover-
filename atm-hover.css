@@ -14,7 +14,19 @@ main{
     justify-content: center;
     align-items: center;
     position:relative;
-    
+    perspective: 1000px;
+}
+.container{
+    position:relative;
+    height: 300PX;
+    width: 500PX;
+    z-index:100;
+    transition:0.6s;
+    transform-style:preserve-3d;
+}
+
+.container:hover{
+    transform:rotateY(180deg);
 }
  main::before{
     content:"";
@@ -38,6 +50,7 @@ main{
  }
 
  .card{
+    position:absolute;
     height: 300PX;
     width: 500PX;
     background-color: rgba(255, 255, 255, 0.1);
@@ -47,8 +60,8 @@ main{
     padding:30px;
     color:white;
     box-shadow: 2px 25px 45px rgba(0,0,0,0.25);
-    border:1px solid  rgba(255, 255, 255, 0.1)
-    
+    border:1px solid  rgba(255, 255, 255, 0.1);
+    backface-visibility:hidden;
  }
  
  
@@ -107,4 +120,49 @@ header{
 }
 .validity{
     font-weight: 300;
+}
+
+.card.backface{
+    border:none;
+    padding:15px 25px 25px 25px;
+    transform:rotateY(180deg);
+}
+.card.backface h6{
+    font-size:8px;
+}
+.card.backface .magnetic-strip{
+    position:absolute;
+    top:40px;
+    left:0;
+    height:45px;
+    width:100%;
+    background: #000;
+
+}
+
+.card.backface .signature{
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top:80px;
+    height:40px;
+    width:85%;
+    background-color:#fff;
+    border-radius:6px;
+    background: repeating-linear-gradient(#fff,#ffff 3px ,#efef 0px,#efef 9px);
+}
+
+.signature i{
+    color:#000;
+    font-size:12px;
+    margin-right:-28px;
+    background-color:#fff;
+    border-radius:4px;
+    padding:4px 6px;
+    z-index:-1;
+}
+
+.card.backface h5{
+    font-size:8px;
+    margin-top:15px;
 }
